@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "9c2ef731-243e-4fbd-85dd-2ce712a6177d",
+		"name": "我的",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "手机号码归属地",
+			"item": [
+				{
+					"name": "手机号码归属地",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "KEY",
+								"value": "0fa88acb277fd5bcf15def1f1e5c9ac6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "15811345218",
+									"type": "text"
+								},
+								{
+									"key": "KEY",
+									"value": "0fa88acb277fd5bcf15def1f1e5c9ac6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://apis.juhe.cn/mobile/get",
+							"protocol": "http",
+							"host": [
+								"apis",
+								"juhe",
+								"cn"
+							],
+							"path": [
+								"mobile",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "newman手机号查询",
+			"item": [
+				{
+					"name": "手机号查询",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"中国移动\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "key",
+								"value": "03ffe3fd839110a87b4d884497c46c73",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tel",
+									"value": "15811345218",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=15850781443",
+							"protocol": "http",
+							"host": [
+								"tcc",
+								"taobao",
+								"com"
+							],
+							"path": [
+								"cc",
+								"json",
+								"mobile_tel_segment.htm"
+							],
+							"query": [
+								{
+									"key": "tel",
+									"value": "15850781443"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
