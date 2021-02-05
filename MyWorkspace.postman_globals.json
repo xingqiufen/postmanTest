@@ -1,0 +1,14 @@
+{
+	"id": "4c29381e-f7c5-4adb-822c-dfa965f64539",
+	"values": [
+		{
+			"key": "IP",
+			"value": "tcc.taobao.com",
+			"enabled": true
+		}
+	],
+	"name": "My Workspace Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-02-04T13:35:14.899Z",
+	"_postman_exported_using": "Postman/8.0.4"
+}
